@@ -1,89 +1,75 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <title>知识全栈-www.zsuuu.com</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/reset.min.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/home.css" />
 
-<!--     <meta name="twitter:title" content="Headers.css" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:description"
-      content="The HTML and CSS for 17+ website headers"
-    />
-    <meta name="twitter:site" content="@shadeed9" />
-    <meta name="twitter:creator" content="@shadeed9" />
-    <meta
-      name="twitter:image"
-      content="https://headers-css.vercel.app/img/card.jpg"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <title>知识全栈-www.zsuuu.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/reset.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <script>
+    function updateCount() {
+      fetch('counter.php')
+        .then(response => response.text())
+        .then(count => {
+          document.getElementById('count').textContent = count;
+        });
+    }  
+  </script>
+</head>
 
-    <meta name="og:title" content="Headers.css" />
-    <meta
-      name="og:site_name"
-      content="The HTML and CSS for 17+ website headers"
-    />
-    <meta
-      name="og:image"
-      content="https://headers-css.vercel.app/img/card.jpg"
-    />
-    <meta name="og:type" content="website" />
-    <meta name="og:locale" content="en_US" /> -->
+<body onload="updateCount()">
+  <header>
+    <img role="presentation" src="img/header-icon.svg" alt="" />
+    <h1>知识全栈</h1>
+    <p>www.<strong>zsuuu</strong>.com</p>
+  </header>
 
-  </head>
-  <body>
-    <header>
-      <img role="presentation" src="img/header-icon.svg" alt="" />
-      <h1>知识全栈</h1>
-      <p>www.<strong>zsuuu</strong>.com</p>
-    </header>
+  <section>
+    <div class="wrapper content">
+      <h2>💊 意识形态 💊</h2>
+      <p>
+        🍼
+        齐泽克在谈到意识形态的时候分享了一个小故事：获得过诺贝尔物理学奖的尼尔斯·玻尔在哥本哈根有一套房子，他在门口挂了一个马头来驱逐邪灵，有朋友问他真的相信这马头可以驱邪吗？他回答：「<strong>当然不信，我是个科学家。但是不管你信不信，这个的确有用。</strong>」齐泽克说，这就是根本意义上现在的意识形态。
+      </p>
+    </div>
+  </section>
 
-   <section>
-      <div class="wrapper content">
-        <h2>💊 意识形态 💊</h2>
-        <p>
-          🍼 齐泽克在谈到意识形态的时候分享了一个小故事：获得过诺贝尔物理学奖的尼尔斯·玻尔在哥本哈根有一套房子，他在门口挂了一个马头来驱逐邪灵，有朋友问他真的相信这马头可以驱邪吗？他回答：「<strong>当然不信，我是个科学家。但是不管你信不信，这个的确有用。</strong>」齐泽克说，这就是根本意义上现在的意识形态。
-        </p>
-        <!--<img src="img/header-css.jpg" alt="" />-->
-      </div>
-    </section>
+  <section>
+    <div class="wrapper content">
+      <h2>🚦 蓝色导标旗 🚦</h2>
 
-    <section>
-      <div class="wrapper content">
-        <h2>🚦 蓝色导标旗 🚦</h2>
+      <h3>✈️ 记录有趣的事情</h3>
+      <ul class="demo">
+        <li><a href="http://101.133.132.75:20418/">日记本</a></li>
+        <li><a href="http://101.133.132.75:20419/">白色相簿</a></li>
+      </ul>
+      <h3>✈️ Screeps: 自制或收集的工具</h3>
+      <ul class="demo">
+        <li><a href="https://screeps-cn.github.io/api/">Screeps文档api</a></li>
+        <li><a href="http://101.133.132.75:911">Shard核弹监视</a></li>
+        <li><a
+            href="http://api-screeps.mofengfeng.com/api/portals/find_route?from=shard0_W1N1&to=shard3_W2N2">星门寻路，超时空军团</a>
+        </li>
+        <li><a href="header-1.html">安卓版Screeps下载</a></li>
+      </ul>
+      <h3>✈️ 私人网盘，非请勿用</h3>
+      <ul class="demo">
+        <li><a href="http://101.133.132.75:9959/">可道云</a></li>
+      </ul>
+      <h3>✈️ 无尽任务: 放置游戏</h3>
+      <ul class="demo">
+        <li><a href="http://101.133.132.75:11111/">无尽任务</a></li>
+      </ul>
+      <h3>✈️ 工具箱</h3>
+      <ul class="demo">
+        <li><a href=" http://101.133.132.75:20420/">中考体育计算器</a></li>
+      </ul>
 
-        <h3>✈️ 记录有趣的事情</h3>
-        <ul class="demo">
-            <li><a href="http://101.133.132.75:20418/">日记本</a></li>
-            <li><a href="http://101.133.132.75:20419/">白色相簿</a></li>
-            </ul>
-         <h3>✈️ Screeps工具箱: 自制或收集的工具</h3>
-            <ul class="demo">
-            <li><a href="https://screeps-cn.github.io/api/">Screeps文档api</a></li>
-            <li><a href="http://101.133.132.75:911">Shard核弹监视</a></li>
-            <li><a href="http://api-screeps.mofengfeng.com/api/portals/find_route?from=shard0_W1N1&to=shard3_W2N2">星门寻路，超时空军团</a></li>
-            <li><a href="header-1.html">安卓版Screeps下载</a></li>
-            </ul>
-        <h3>✈️ 可道云: 私人网盘非请勿用</h3>
-            <ul class="demo">
-            <li><a href="http://101.133.132.75:9959/">可道云</a></li>
-            </ul>
-        <h3>✈️ 无尽任务: 放置游戏</h3>
-            <ul class="demo">
-            <li><a href="http://101.133.132.75:11111/">无尽任务</a></li>
-            </ul>
-         <h3>✈️ 工具箱</h3>
-            <ul class="demo">
-            <li><a href=" http://101.133.132.75:20420/">中考体育计算器</a></li>
-            </ul>
-       
 
-<!--         <li><a href="header-1.html">Header 1</a></li>
+      <!--         <li><a href="header-1.html">Header 1</a></li>
         <li><a href="header-2.html">Header 2</a></li>
-        
         <li><a href="header-3.html">Header 3</a></li>
         <li><a href="header-4.html">Header 4</a></li>
         <li><a href="header-5.html">Header 5</a></li>
@@ -99,22 +85,24 @@
         <li><a href="header-15.html">Header 15</a></li>
         <li><a href="header-16.html">Header 16</a></li>
         <li><a href="header-17.html">Header 17</a></li> -->
-        
-      </div>
-    </section>
- 
-        
-        
-    <footer>
-      <div class="wrapper">
-        <div class="author">
-          <div class="author-meta">
-            <p class="author-desc">
-              Copyright © 1993-2024 知识全栈 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">湘ICP备2020021251号</a>
-            </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrapper">
+      <div class="author">
+        <div class="author-meta">
+          <div id='beian'>
+            Copyright © 1993-2024 知识全栈 备案号：<a href="https://beian.miit.gov.cn/" rel="noopener noreferrer"
+              target="_blank">湘ICP备2020021251号</a>
+          </div>
+          <div id='countstyles'>
+            页面访问次数: <span id="count">0</span>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
