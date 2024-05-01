@@ -17,6 +17,17 @@
         });
     }  
   </script> -->
+  <script>  
+    function updateTime() {  
+        var now = new Date();  
+        var timeString = now.toLocaleTimeString();  
+        document.getElementById("currentTime").textContent = timeString;  
+    }  
+
+    // 页面加载后更新一次时间，并每秒钟更新一次  
+    window.onload = updateTime;  
+    setInterval(updateTime, 1000);  
+</script>  
 </head>
 
 <!-- <body onload="updateCount()"> -->
@@ -27,6 +38,10 @@
     <h1>知识全栈</h1>
     <p>www.<strong>zsuuu</strong>.com</p>
   </header>
+  <div class="container">
+    <h1>当前时间：</h1>
+    <p id="currentTime">加载中...</p>
+  </div>
 
   <section>
     <div class="wrapper content">
