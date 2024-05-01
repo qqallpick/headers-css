@@ -8,40 +8,30 @@
   <link rel="stylesheet" href="styles/reset.min.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/home.css" />
-  <!-- <script>
-    function updateCount() {
-      fetch('counter.php')
-        .then(response => response.text())
-        .then(count => {
-          document.getElementById('count').textContent = count;
-        });
-    }  
-  </script> -->
-  <script>  
-    function updateTime() {  
-        var now = new Date();  
-        var timeString = now.toLocaleTimeString();  
-        document.getElementById("currentTime").textContent = timeString;  
-    }  
+  <link rel="icon" type="image/x-icon" href="img/header-icon.svg">  
+  <script>
+    function updateTime() {
+      var now = new Date();
+      var timeString = now.toLocaleTimeString();
+      document.getElementById("currentTime").textContent = timeString;
+    }
 
     // 页面加载后更新一次时间，并每秒钟更新一次  
-    window.onload = updateTime;  
+    window.onload = updateTime;
     setInterval(updateTime, 1000);  
-</script>  
+  </script>
 </head>
-
-<!-- <body onload="updateCount()"> -->
 
 <body>
   <header>
     <img role="presentation" src="img/header-icon.svg" alt="" />
-    <h1>知识全栈</h1>
-    <p>www.<strong>zsuuu</strong>.com</p>
+    <h1><strong>知识全栈</strong></h1>
+    <p>www.zsuuu.com</p>
+    <div class="container">
+      <p id="currentTime">   </p>
+    </div>
   </header>
-  <div class="container">
-    <h1>当前时间：</h1>
-    <p id="currentTime">加载中...</p>
-  </div>
+
 
   <section>
     <div class="wrapper content">
@@ -113,9 +103,6 @@
             Copyright © 1993-2024 知识全栈 备案号：<a href="https://beian.miit.gov.cn/" rel="noopener noreferrer"
               target="_blank">湘ICP备2020021251号</a>
           </div>
-          <!-- <div id='countstyles'>
-            页面访问次数: <span id="count">0</span>
-          </div> -->
         </div>
       </div>
     </div>
