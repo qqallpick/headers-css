@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-.container{
+.container {
   max-width: 400px;
   margin: 0 auto;
 }
@@ -94,4 +94,11 @@ body {
   /* 设置文本靠右对齐 */
   font-size: 10px;
   /* 假设你想将字体大小缩小到14像素，你可以根据需要调整这个值 */
+}
+
+canvas {
+  border: 1px solid #aa96da;
+  background-color: #a8d8ea;
+  display: block;
+  margin: 0 auto;
 }
