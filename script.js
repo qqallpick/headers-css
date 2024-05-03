@@ -24,11 +24,21 @@ class Ball {
         this.y += this.dy;  
   
         // 边界碰撞检测  
-        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {  
+        if (this.x + this.radius >= canvas.width){
+            this.dx = -this.dx; 
+            this.x = canvas.width -this.radius;
+        }
+        if( this.x - this.radius <= 0){
             this.dx = -this.dx;  
+            this.x = this.radius;
         }  
-        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {  
+        if (this.y + this.radius >= canvas.height){
             this.dy = -this.dy;  
+            this.y = canvas.height -this.radius;
+        }
+         if(this.y - this.radius <= 0) {  
+            this.dy = -this.dy;  
+            this.y = this.radius;
         }  
     }  
 
@@ -53,10 +63,10 @@ collideWith(otherBall) {
         const vyB = otherBall.dy; // Ball B的速度y分量  
   
         // 计算碰撞后的速度分量  
-        const vxAf = vxA - (2 * nx * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
-        const vyAf = vyA - (2 * ny * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
-        const vxBf = vxB - (2 * nx * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
-        const vyBf = vyB - (2 * ny * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
+        const vxAf = vxA - (1 * nx * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
+        const vyAf = vyA - (1 * ny * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
+        const vxBf = vxB - (1 * nx * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
+        const vyBf = vyB - (1 * ny * (nx * vxA + ny * vyA - nx * vxB - ny * vyB));  
   
         // 更新小球的速度  
         this.dx = vxAf;  
@@ -75,18 +85,18 @@ collideWith(otherBall) {
 
 }  
   
-const ball1 = new Ball(10, 10, 5, 1, -2,"#f9ed69");  
-const ball2 = new Ball(210, 10, 5, 2, -1,"#f08a5d");  
+const ball1 = new Ball(10, 10, 5, 0.3, -0.5,"#f9ed69");  
+const ball2 = new Ball(210, 10, 3, 0.7, -0.6,"#f08a5d");  
 function animate() {  
 
     requestAnimationFrame(animate);  
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);  
-  
-    ball1.update();  
-    ball2.update();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     ball1.collideWith(ball2);
     ball2.collideWith(ball1);
+    ball1.update();  
+    ball2.update();
     ball1.draw();   
     ball2.draw();
 }  

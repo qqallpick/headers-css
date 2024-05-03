@@ -97,8 +97,8 @@ body {
 }
 
 canvas {
-  border: 1px solid #aa96da;
-  background-color: #a8d8ea;
+  border: 1px solid #ffffff;
+  background-color: #87bff3;
   display: block;
   margin: 0 auto;
 }
